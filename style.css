@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Ubuntu', sans-serif;
+  color: #000;
 }
 
 .wrapper {
@@ -20,12 +21,10 @@ p {
   padding-top: 10px;
 }
 
-.positive {
-  color: green;
-}
-
-.negative {
-  color: red;
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .bold {
@@ -51,9 +50,7 @@ article h3 {
 
 section {
   border-top: 1px solid gray;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  
   padding: 10px 0 15px;
 }
 
@@ -76,6 +73,35 @@ section:last-child {
 
 .profile .material-icons {
   font-size: 58px;
+  position: relative;
+  
+}
+
+.voteup,
+.votedown,
+.report {
+  display: inline-block;
+  position: relative;
+}
+
+.voteup,
+.votedown {
+  margin-right: 40px;
+}
+
+.voteup .result,
+.votedown .result {
+position: absolute;
+font-family: sans-serif;
+top: 4px;
+}
+
+.voteup .result {
+  left: 65px;
+}
+
+.votedown .result {
+  left: 84px;
 }
 
 .comment {
@@ -83,10 +109,17 @@ section:last-child {
 }
 
 /* Vote section */
-.vote span {
+.vote i {
   cursor: pointer;
+}
+
+.vote span {
+  display: inline-block;
+  vertical-align: 5px;
 }
 
 .vote p {
   padding-left: 10px;
 }
+
+
